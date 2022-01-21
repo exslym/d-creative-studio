@@ -1,0 +1,47 @@
+{
+	"root": true,
+	"env": {
+		"browser": true, // Разрешить запуск кода в браузере
+		"commonjs": true, // Разрешить commonJS
+		"es6": true, // Включает синтаксис ES6 автоматически
+		"jquery": true, // Разрешить jQuery
+		"node": true // Разрешить запуск кода в node
+	},
+	"extends": ["eslint:recommended", "prettier"],
+	"parser": "babel-eslint", // Парсер для обработки jsx кода
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true // Разрешить формат JSX
+		},
+		"ecmaVersion": 6, // Версия ECMAScript
+		"sourceType": "module" // Включить модульную поддержку кода ECMAScript
+	},
+	"plugins": [
+		// Включить поддержку плагинов
+		"import",
+		"prettier"
+	],
+	"rules": {
+		// Задать правила игнорирования типичных ошибок
+		"no-unused-vars": "off",
+		// "no-unused-vars": [
+		// 	"error",
+		// 	{
+		// 		"vars": "local",
+		// 		"args": "none",
+		// 		"varsIgnorePattern": "[iI]gnored",
+		// 		"argsIgnorePattern": "^_",
+		// 		"ignoreRestSiblings": true,
+		// 		"caughtErrors": "none",
+		// 		"caughtErrorsIgnorePattern": "^ignore"
+		// 	}
+		// ],
+
+		"linebreak-style": [
+			// Применять согласованный стиль переноса строки
+			"error",
+			"unix"
+		],
+		"prettier/prettier": "error" // Обязательно!! Подсвечивает ошибки из Prettier.
+	}
+}
