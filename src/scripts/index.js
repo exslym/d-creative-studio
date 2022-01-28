@@ -86,6 +86,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			burger.classList.remove('close-menu');
 			menu.classList.add('open-menu');
 			menu.classList.remove('close-menu');
+
 			document.body.classList.add('overflow-hidden');
 			main.classList.add('non-visible');
 			footer.classList.add('non-visible');
@@ -97,6 +98,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			burger.classList.add('close-menu');
 			menu.classList.remove('open-menu');
 			menu.classList.add('close-menu');
+
 			document.body.classList.remove('overflow-hidden');
 			main.classList.remove('non-visible');
 			footer.classList.remove('non-visible');
