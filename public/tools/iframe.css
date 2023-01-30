@@ -1,0 +1,56 @@
+html,
+body,
+.mm-page,
+.iframe-container,
+.content.container-fluid,
+.content.container-fluid .row-fluid,
+.content.container-fluid .row-fluid > div {
+	height: 100%;
+}
+
+body {
+	overflow-y: hidden;
+	margin: 0 !important;
+}
+
+.oh {
+	overflow: visible !important;
+}
+
+header.scrollSlide {
+	height: 80px;
+	top: 0 !important;
+	transform: translate(0) !important;
+}
+
+.separatorHeaderHeight {
+	height: 80px !important;
+}
+
+.wrap {
+	height: 100% !important;
+}
+
+.content.container-fluid .row-fluid {
+	max-width: none;
+}
+
+/* .iframe-container iframe {
+    width: 100%;
+    background-color: #fff;
+    height: calc(100% - 50px);
+} */
+.iframe-container iframe {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.btn.goBack-btn {
+	display: none;
+}
+@media (max-width: 768px) {
+	.iframe-container {
+		margin-top: 0;
+	}
+}
