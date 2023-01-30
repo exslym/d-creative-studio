@@ -73,7 +73,8 @@ window.addEventListener('DOMContentLoaded', function () {
 	let burger = document.querySelector('#burger'),
 		menu = document.querySelector('#menu'),
 		main = document.querySelector('.main'),
-		footer = document.querySelector('.footer');
+		footer = document.querySelector('.footer'),
+		menuItems = document.querySelectorAll('.menu__item');
 
 	burger.addEventListener('click', e => {
 		e.preventDefault();
@@ -104,6 +105,50 @@ window.addEventListener('DOMContentLoaded', function () {
 			footer.classList.remove('non-visible');
 		}
 	});
+
+	menuItems.forEach(item => {
+		item.addEventListener('click', () => {
+			burger.classList.remove('tap-to-close');
+			burger.classList.add('tap-to-open');
+
+			burger.classList.remove('open-menu');
+			burger.classList.add('close-menu');
+			menu.classList.remove('open-menu');
+			menu.classList.add('close-menu');
+
+			document.body.classList.remove('overflow-hidden');
+			main.classList.remove('non-visible');
+			footer.classList.remove('non-visible');
+		});
+	});
+
+	smoothScroll('anchor');
+	function smoothScroll(anchorClass) {
+		if (document.querySelector(`.${anchorClass}`)) {
+			document.querySelectorAll(`.${anchorClass}`).forEach(link => {
+				link.addEventListener('click', function (e) {
+					if (
+						document.getElementById(
+							link.getAttribute('href').substring(1)
+						)
+					) {
+						e.preventDefault();
+						let href = link.getAttribute('href').substring(1);
+						const scrollTarget = document.getElementById(href);
+						const topOffset = 0;
+						const elementPosition =
+							scrollTarget.getBoundingClientRect().top;
+						const offsetPosition = elementPosition - topOffset;
+
+						window.scrollBy({
+							top: offsetPosition,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		}
+	}
 
 	//TEXT & ASTERIKS ANIMATION ON SCROLL:
 	let runTeam = document.querySelector('#run_team'),

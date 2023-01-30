@@ -467,9 +467,12 @@ h3 {
 				}
 				.calc {
 					position: relative;
+					display: block;
 					max-width: clamp(120px, 20.32vw, 260px);
 					width: 100%;
 					margin-right: clamp(20px, 4.84vw, 62px);
+					color: transparent;
+					text-decoration: none;
 					cursor: pointer;
 					.calc-round {
 						background-image: url('../../public/circle01.svg');
@@ -491,6 +494,7 @@ h3 {
 							font-size: clamp(14px, 1.72vw, 22px);
 							line-height: 127%;
 							max-width: 132px;
+							color: var(--color-black);
 						}
 					}
 					.calc-arrow {
@@ -897,6 +901,9 @@ h3 {
 			}
 			&__calc {
 				position: relative;
+				display: block;
+				color: transparent;
+				text-decoration: none;
 				max-width: clamp(120px, 20.32vw, 260px);
 				width: 100%;
 				margin-right: clamp(20px, 3.4375vw, 44px);
@@ -920,6 +927,7 @@ h3 {
 						font-size: clamp(14px, 1.72vw, 22px);
 						line-height: 127%;
 						max-width: 132px;
+						color: var(--color-black);
 					}
 				}
 				.order-arrow {
