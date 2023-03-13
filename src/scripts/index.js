@@ -9,33 +9,6 @@ if (process.env.NODE_ENV === 'development') {
 window.addEventListener('DOMContentLoaded', function () {
 	'use strict';
 
-	// принудительное обновление страницы при ресайзе окна браузера (jQuery)
-	// jQuery(function ($) {
-	// 	var windowWidth = $(window).width();
-
-	// 	$(window).resize(function () {
-	// 		if (windowWidth != $(window).width()) {
-	// 			location.reload();
-	// 			return;
-	// 		}
-	// 	});
-	// });
-
-	// принудительное обновление страницы при ресайзе окна браузера (vanila JS)
-	// const addEvent = function (object, type, callback) {
-	// 	if (object == null || typeof object == 'undefined') return;
-	// 	if (object.addEventListener) {
-	// 		object.addEventListener(type, callback, false);
-	// 	} else if (object.attachEvent) {
-	// 		object.attachEvent('on' + type, callback);
-	// 	} else {
-	// 		object['on' + type] = callback;
-	// 	}
-	// };
-	// addEvent(window, 'resize', function () {
-	// 	window.location.reload();
-	// });
-
 	//плавное раскрытие списков:
 	let expandButton = document.querySelectorAll('.expand_btn'),
 		expandableBox = document.querySelectorAll('.expandable_box'),
@@ -60,8 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 					expandableTitle[j].style.maxHeight = null;
 					expandAction[j].classList.remove('pinch');
 				}
-				expandableBox[i].style.maxHeight =
-					expandableBox[i].scrollHeight + 'px';
+				expandableBox[i].style.maxHeight = expandableBox[i].scrollHeight + 'px';
 				expandableTitle[i].style.maxHeight =
 					expandableBox[i].scrollHeight + 'px';
 				expandAction[i].classList.add('pinch');
@@ -127,17 +99,12 @@ window.addEventListener('DOMContentLoaded', function () {
 		if (document.querySelector(`.${anchorClass}`)) {
 			document.querySelectorAll(`.${anchorClass}`).forEach(link => {
 				link.addEventListener('click', function (e) {
-					if (
-						document.getElementById(
-							link.getAttribute('href').substring(1)
-						)
-					) {
+					if (document.getElementById(link.getAttribute('href').substring(1))) {
 						e.preventDefault();
 						let href = link.getAttribute('href').substring(1);
 						const scrollTarget = document.getElementById(href);
 						const topOffset = 0;
-						const elementPosition =
-							scrollTarget.getBoundingClientRect().top;
+						const elementPosition = scrollTarget.getBoundingClientRect().top;
 						const offsetPosition = elementPosition - topOffset;
 
 						window.scrollBy({
@@ -212,8 +179,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run HEADER LOGO:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20,
 				scaleX = 1 / (1 + percent * 1.3);
 
@@ -242,9 +208,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.addEventListener('scroll', () => {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-			runCreative.style.transform = `translateX(${
-				-percent * 220 + 16000
-			}px)`;
+			runCreative.style.transform = `translateX(${-percent * 220 + 16000}px)`;
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
@@ -257,9 +221,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
 			//"Контентмейкеры"
-			marquee[0].style.transform = `translateX(${
-				-percent * 80 * 1 + 2000
-			}px)`;
+			marquee[0].style.transform = `translateX(${-percent * 80 * 1 + 2000}px)`;
 			marquee[1].style.transform = `translateX(${
 				-percent * 80 * 0.8 + 2000
 			}px)`;
@@ -267,9 +229,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 80 * 0.6 + 1500
 			}px)`;
 			//"Дизайнеры"
-			marquee[3].style.transform = `translateX(${
-				-percent * 80 * 1 + 2400
-			}px)`;
+			marquee[3].style.transform = `translateX(${-percent * 80 * 1 + 2400}px)`;
 			marquee[4].style.transform = `translateX(${
 				-percent * 80 * 0.8 + 1600
 			}px)`;
@@ -277,9 +237,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 80 * 0.6 + 1200
 			}px)`;
 			//"Разработчики"
-			marquee[6].style.transform = `translateX(${
-				-percent * 80 * 1 + 3100
-			}px)`;
+			marquee[6].style.transform = `translateX(${-percent * 80 * 1 + 3100}px)`;
 			marquee[7].style.transform = `translateX(${
 				-percent * 80 * 0.8 + 2300
 			}px)`;
@@ -287,9 +245,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 80 * 0.6 + 2300
 			}px)`;
 			//"Видеографы"
-			marquee[9].style.transform = `translateX(${
-				-percent * 80 * 1 + 2400
-			}px)`;
+			marquee[9].style.transform = `translateX(${-percent * 80 * 1 + 2400}px)`;
 			marquee[10].style.transform = `translateX(${
 				-percent * 80 * 0.8 + 1500
 			}px)`;
@@ -333,8 +289,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run Box 1, 2, 3:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 850,
 				translateY1 = percent * 20 - 850,
 				translateY2 = percent * 18 - 850;
@@ -349,8 +304,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1200;
 
 			if (translateY < 0) {
@@ -361,8 +315,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1500,
 				translateY1 = percent * 20 - 1500,
 				translateY2 = percent * 18 - 1400,
@@ -385,8 +338,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				rotateCircle1 = percent * 100;
 
 			if (rotateCircle1 < 250) {
@@ -399,8 +351,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				rotateCircle2 = percent * 100 + 600;
 
 			if (rotateCircle2 < 9000) {
@@ -430,9 +381,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.addEventListener('scroll', () => {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-			runCreative.style.transform = `translateX(${
-				-percent * 160 + 11000
-			}px)`;
+			runCreative.style.transform = `translateX(${-percent * 160 + 11000}px)`;
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
@@ -445,9 +394,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
 			//"Контентмейкеры"
-			marquee[0].style.transform = `translateX(${
-				-percent * 60 * 1 + 1200
-			}px)`;
+			marquee[0].style.transform = `translateX(${-percent * 60 * 1 + 1200}px)`;
 			marquee[1].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1000
 			}px)`;
@@ -455,19 +402,13 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 60 * 0.6 + 1000
 			}px)`;
 			//"Дизайнеры"
-			marquee[3].style.transform = `translateX(${
-				-percent * 60 * 1 + 1600
-			}px)`;
+			marquee[3].style.transform = `translateX(${-percent * 60 * 1 + 1600}px)`;
 			marquee[4].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1400
 			}px)`;
-			marquee[5].style.transform = `translateX(${
-				-percent * 60 * 0.6 + 800
-			}px)`;
+			marquee[5].style.transform = `translateX(${-percent * 60 * 0.6 + 800}px)`;
 			//"Разработчики"
-			marquee[6].style.transform = `translateX(${
-				-percent * 60 * 1 + 2300
-			}px)`;
+			marquee[6].style.transform = `translateX(${-percent * 60 * 1 + 2300}px)`;
 			marquee[7].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 2000
 			}px)`;
@@ -475,9 +416,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 60 * 0.6 + 1900
 			}px)`;
 			//"Видеографы"
-			marquee[9].style.transform = `translateX(${
-				-percent * 60 * 1 + 1800
-			}px)`;
+			marquee[9].style.transform = `translateX(${-percent * 60 * 1 + 1800}px)`;
 			marquee[10].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1200
 			}px)`;
@@ -521,8 +460,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run Box 1, 2, 3:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 650,
 				translateY1 = percent * 20 - 650,
 				translateY2 = percent * 18 - 650;
@@ -537,8 +475,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1000;
 
 			if (translateY < 0) {
@@ -549,8 +486,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1300,
 				translateY1 = percent * 20 - 1300,
 				translateY2 = percent * 18 - 1200,
@@ -573,8 +509,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				rotateCircle1 = percent * 100;
 
 			if (rotateCircle1 < 200) {
@@ -587,8 +522,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				rotateCircle2 = percent * 100 + 600;
 
 			if (rotateCircle2 < 9000) {
@@ -618,9 +552,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.addEventListener('scroll', () => {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-			runCreative.style.transform = `translateX(${
-				-percent * 70 + 5000
-			}px)`;
+			runCreative.style.transform = `translateX(${-percent * 70 + 5000}px)`;
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
@@ -633,9 +565,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
 			//"Контентмейкеры"
-			marquee[0].style.transform = `translateX(${
-				-percent * 60 * 1 + 1500
-			}px)`;
+			marquee[0].style.transform = `translateX(${-percent * 60 * 1 + 1500}px)`;
 			marquee[1].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1300
 			}px)`;
@@ -643,9 +573,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 60 * 0.6 + 1300
 			}px)`;
 			//"Дизайнеры"
-			marquee[3].style.transform = `translateX(${
-				-percent * 60 * 1 + 1600
-			}px)`;
+			marquee[3].style.transform = `translateX(${-percent * 60 * 1 + 1600}px)`;
 			marquee[4].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1400
 			}px)`;
@@ -653,9 +581,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 60 * 0.6 + 1000
 			}px)`;
 			//"Разработчики"
-			marquee[6].style.transform = `translateX(${
-				-percent * 60 * 1 + 1600
-			}px)`;
+			marquee[6].style.transform = `translateX(${-percent * 60 * 1 + 1600}px)`;
 			marquee[7].style.transform = `translateX(${
 				-percent * 60 * 0.6 + 1700
 			}px)`;
@@ -663,9 +589,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				-percent * 60 * 0.8 + 2200
 			}px)`;
 			//"Видеографы"
-			marquee[9].style.transform = `translateX(${
-				-percent * 60 * 1 + 1800
-			}px)`;
+			marquee[9].style.transform = `translateX(${-percent * 60 * 1 + 1800}px)`;
 			marquee[10].style.transform = `translateX(${
 				-percent * 60 * 0.8 + 1400
 			}px)`;
@@ -709,8 +633,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run Box 1, 2, 3:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 650,
 				translateY1 = percent * 20 - 650,
 				translateY2 = percent * 18 - 650;
@@ -725,8 +648,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1000;
 
 			if (translateY < 0) {
@@ -737,8 +659,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1300,
 				translateY1 = percent * 20 - 1300,
 				translateY2 = percent * 18 - 1200,
@@ -760,8 +681,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 26.5;
 			orangeCircle.style.transform = `translateY(${translateY}px)`;
 		});
@@ -799,9 +719,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.addEventListener('scroll', () => {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-			runCreative.style.transform = `translateX(${
-				-percent * 50 + 3500
-			}px)`;
+			runCreative.style.transform = `translateX(${-percent * 50 + 3500}px)`;
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
@@ -890,8 +808,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run Box 1, 2, 3:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 650,
 				translateY1 = percent * 20 - 650,
 				translateY2 = percent * 18 - 650;
@@ -906,8 +823,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1100;
 
 			if (translateY < 0) {
@@ -918,8 +834,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1300,
 				translateY1 = percent * 20 - 1500,
 				translateY2 = percent * 18 - 1400,
@@ -941,8 +856,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 29;
 			orangeCircle.style.transform = `translateY(${translateY}px)`;
 		});
@@ -977,9 +891,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.addEventListener('scroll', () => {
 			let percent =
 				((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-			runCreative.style.transform = `translateX(${
-				-percent * 50 + 3500
-			}px)`;
+			runCreative.style.transform = `translateX(${-percent * 50 + 3500}px)`;
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
@@ -1068,8 +980,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// Run Box 1, 2, 3:
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 650,
 				translateY1 = percent * 20 - 650,
 				translateY2 = percent * 18 - 650;
@@ -1084,8 +995,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1100;
 
 			if (translateY < 0) {
@@ -1096,8 +1006,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 20 - 1300,
 				translateY1 = percent * 20 - 1500,
 				translateY2 = percent * 18 - 1400,
@@ -1119,8 +1028,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		document.addEventListener('scroll', () => {
 			let percent =
-					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) *
-					100,
+					((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100,
 				translateY = percent * 27;
 			orangeCircle.style.transform = `translateY(${translateY}px)`;
 		});

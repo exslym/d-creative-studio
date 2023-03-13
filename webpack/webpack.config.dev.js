@@ -1,52 +1,86 @@
 const Path = require('path');
 const Webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = merge(common, {
 	mode: 'development',
-	devtool: 'cheap-eval-source-map',
-	// devtool: 'eval-cheap-module-source-map',
 	output: {
+		filename: 'js/[name].js',
 		chunkFilename: 'js/[name].chunk.js',
+		assetModuleFilename: '[path][name][ext][query]',
 	},
 	devServer: {
-		inline: true,
 		hot: true,
 	},
 	plugins: [
 		new Webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('development'),
 		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: Path.resolve(__dirname, '../public'),
+					to: 'public',
+				},
+			],
+		}),
+		new ESLintWebpackPlugin({
+			extensions: [`js`, `jsx`],
+			exclude: [`/node_modules/`, `/bower_components/`],
+		}),
 	],
 	module: {
 		rules: [
-			{
-				test: /\.js$/,
-				include: Path.resolve(__dirname, '../src'),
-				enforce: 'pre',
-				loader: 'eslint-loader',
-				options: {
-					emitWarning: true,
-				},
-			},
 			{
 				test: /\.html$/i,
 				loader: 'html-loader',
 			},
 			{
-				test: /\.js$/,
-				include: Path.resolve(__dirname, '../src'),
-				loader: 'babel-loader',
-			},
-			{
-				test: /\.s?css$/i,
+				test: /\.(sa|sc|c)ss$/,
 				use: [
 					'style-loader',
-					'css-loader?sourceMap=true',
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [
+									[
+										'postcss-preset-env',
+										{
+											//Options
+										},
+									],
+								],
+							},
+						},
+					},
 					'sass-loader',
 				],
 			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+					},
+				},
+			},
+			// {
+			// 	test: /\.m?js$/,
+			// 	exclude: /node_modules/,
+			// 	use: {
+			// 		loader: 'babel-loader',
+			// 		options: {
+			// 			presets: ['@babel/preset-env', { targets: 'defaults' }],
+			// 		},
+			// 	},
+			// },
 		],
 	},
 });

@@ -1,4 +1,4 @@
-@import url('../../public/tools/normalize.min.css');
+@import url('../../tools/normalize.min.css');
 @import url('../../public/fonts/fonts.css');
 
 :root {
@@ -11,16 +11,16 @@
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	// z-index: 10;
+
 	&::after {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		// z-index: 10;
+
 	}
 	&::before {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		// z-index: 10;
+
 	}
 }
 a {
@@ -189,7 +189,7 @@ h3 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-image: url('../../public/cursor.png');
+	background-image: url('../../public/images/cursor.png');
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -475,7 +475,7 @@ h3 {
 					text-decoration: none;
 					cursor: pointer;
 					.calc-round {
-						background-image: url('../../public/circle01.svg');
+						background-image: url('../../public/images/circle01.svg');
 						background-position: center;
 						background-size: 100%;
 						background-repeat: no-repeat;
@@ -909,7 +909,7 @@ h3 {
 				margin-right: clamp(20px, 3.4375vw, 44px);
 				cursor: pointer;
 				.order-round {
-					background-image: url('../../public/circle02.svg');
+					background-image: url('../../public/images/circle02.svg');
 					background-position: center;
 					background-size: 100%;
 					background-repeat: no-repeat;
