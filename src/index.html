@@ -825,7 +825,13 @@
 												</p>
 											</div>
 											<div class="item item4">
-												<p>13&nbsp;лет</p>
+												<p>
+													<span id="years">
+														<script type="module">
+															years();
+														</script>
+													</span>
+												</p>
 											</div>
 										</div>
 									</div>
@@ -874,7 +880,15 @@
 					</div>
 					<div class="info__line"></div>
 					<div class="info__bottom">
-						<div class="info__bottom_item">&copy;&nbsp;2020 D-Creative</div>
+						<div class="info__bottom_item">
+							&copy;&nbsp;
+							<span id="currentYear">
+								<script type="module">
+									currentDate();
+								</script>
+							</span>
+							D-Creative
+						</div>
 						<div class="info__bottom_item">
 							<a href="#">Политика конфиденциальности</a>
 						</div>
@@ -884,4 +898,35 @@
 		</footer>
 	</body>
 	<div id="customCursor"></div>
+
+	<script>
+		const currentDate = () => {
+			let currentYear = document.getElementById('currentYear');
+			currentYear.innerHTML = new Date().getFullYear();
+			return currentYear;
+		};
+	</script>
+	<script>
+		const years = () => {
+			let element = document.getElementById('years');
+			let a = new Date().getFullYear();
+			let b = a - 2007;
+			let c = Number(b.toString().slice(-1));
+			switch (true) {
+				case c === 1 && b !== 11:
+					element.innerHTML = `${b}&nbsp;год`;
+					return element;
+					break;
+				case c === 2 && b !== 12:
+				case c === 3 && b !== 13:
+				case c === 4 && b !== 14:
+					element.innerHTML = `${b}&nbsp;года`;
+					return element;
+					break;
+				default:
+					element.innerHTML = `${b}&nbsp;лет`;
+					return element;
+			}
+		};
+	</script>
 </html>
