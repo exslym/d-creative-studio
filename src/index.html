@@ -79,7 +79,8 @@
 									<span><mark>для&nbsp;фармкомпаний</mark></span>
 								</p>
 							</div>
-							<a href="https://dcreativestudio.ru/briff" target="_blank" class="calc" id="calc_animate">
+							<a href="https://dcreativestudio.ru/briff" target="_blank" class="calc" id="calc_animate"
+								onclick="sendMessage('calculate_project')">
 								<div class="calc-round"></div>
 								<div class="calc-text">
 									<p>Рассчитать проект</p>
@@ -88,7 +89,7 @@
 									<img src="../public/images/arrow01.svg" alt="arrow" />
 								</div>
 							</a>
-							<a href="https://dcreativestudio.ru/briff" target="_blank" class="mob-calc" id="mob-calc_animate">
+							<a href="https://dcreativestudio.ru/briff" target="_blank" class="mob-calc" id="mob-calc_animate" onclick="sendMessage('calculate_project')">
 								<div class="mob-calc-round"></div>
 								<div class="mob-calc-text">
 									<p>Рассчитать проект</p>
@@ -780,14 +781,15 @@
 			</main>
 		</div>
 	</div>
-	<footer class="footer" id="order">
+	<footer class="footer" id="order" onclick="sendMessage('make_order')">
 		<div class="container">
 			<div class="order">
 				<div class="order__title">
 					<h2>Заказать проект</h2>
 				</div>
 
-				<a href="https://dcreativestudio.ru/briff" target="_blank" class="order__calc" id="order_animate">
+				<a href="https://dcreativestudio.ru/briff" target="_blank" class="order__calc" id="order_animate"
+					onclick="sendMessage('fill_brief')">
 					<div class="order-round"></div>
 					<div class="order-text">
 						<p>Заполнить бриф</p>
@@ -797,7 +799,8 @@
 					</div>
 				</a>
 
-				<a href="https://dcreativestudio.ru/briff" target="_blank" class="mob-order__calc" id="mob-order_animate">
+				<a href="https://dcreativestudio.ru/briff" target="_blank" class="mob-order__calc" id="mob-order_animate"
+					onclick="sendMessage('fill_brief')">
 					<div class="mob-order-round"></div>
 					<div class="mob-order-text">
 						<p>Заполнить бриф</p>
@@ -806,10 +809,10 @@
 			</div>
 			<div class="info">
 				<div class="info__email">
-					<a href="mailto:sales@doctornarabote.ru">sales@doctornarabote.ru</a>
+					<a href="mailto:sales@doctornarabote.ru" onclick="sendMessage('mail')">sales@doctornarabote.ru</a>
 				</div>
 				<div class="info__phone">
-					<a href="tel:+74957440491">+7&nbsp;(495)&nbsp;744-04-91</a>
+					<a href="tel:+74957440491" onclick="sendMessage('phone')">+7&nbsp;(495)&nbsp;744-04-91</a>
 				</div>
 				<div class="info__line"></div>
 				<div class="info__bottom">
