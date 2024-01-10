@@ -828,6 +828,13 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		// Функция для отправки сообщения родительскому окну
+		function sendMessage(buttonName) {
+			window.parent.postMessage({ buttonName: buttonName }, 'https://dcreativestudio.ru/');
+			console.log(buttonName)
+		}
+	</script>
 </body>
 <div id="customCursor"></div>
 
