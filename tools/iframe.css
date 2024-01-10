@@ -1,0 +1,25 @@
+body {
+	overflow-y: hidden;
+	margin: 0 !important;
+}
+
+body .wrapper {
+	width: auto;
+}
+
+.iframe-container {
+	width: 100vw;
+	height: 100vh !important;
+}
+
+.iframe-container iframe {
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+	.iframe-container {
+		margin-top: 0;
+	}
+}
