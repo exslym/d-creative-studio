@@ -19,8 +19,8 @@
 					<div class="header_wrapper">
 						<div class="header__logo" id="logo_box">
 							<div class="header__logo_text">
-								Мы&nbsp;именно&nbsp;те, кто точно знают, какой контент интересен
-								врачам и&nbsp;как его лучше преподнести
+								Мы&nbsp;знаем, какой контент интересен врачам и&nbsp;как его
+								лучше преподнести
 							</div>
 							<div class="header__logo_img" id="logo_img">
 								<img src="../public/images/logo1.svg" alt="logo1" />
@@ -105,17 +105,22 @@
 										<img src="../public/images/arrow01.svg" alt="arrow" />
 									</div>
 								</a>
-								<div class="mob-calc" id="mob-calc_animate">
+								<a
+									href="https://dcreativestudio.ru/briff"
+									target="_blank"
+									class="mob-calc"
+									id="mob-calc_animate"
+								>
 									<div class="mob-calc-round"></div>
 									<div class="mob-calc-text">
 										<p>Рассчитать проект</p>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="intro__mob-subtitle">
 								<p>
-									Мы&nbsp;именно&nbsp;те, кто точно знают, какой контент
-									интересен врачам и&nbsp;как его лучше преподнести
+									Мы&nbsp;знаем, какой контент интересен врачам и&nbsp;как его
+									лучше преподнести
 								</p>
 							</div>
 						</div>
@@ -138,7 +143,7 @@
 										class="contentmakers_btn expand_btn"
 										id="contentmakers_btn"
 									>
-										<div class="expand_btn_text">Контентмейкеры</div>
+										<div class="expand_btn_text">Медредакторы</div>
 										<div class="expand_btn_icon">
 											<div class="minus"></div>
 										</div>
@@ -767,9 +772,8 @@
 							<div class="services__box services__box_2">
 								<div class="services__box_title" id="run_box2">
 									<p>
-										Это лишь часть из&nbsp;того, что мы&nbsp;делаем. Идеям
-										вашего бренда мы&nbsp;найдем грамотное решение, реализуем
-										и&nbsp;кастомизируем для врачей
+										Идеям вашего бренда найдём оптимальное решение, реализуем
+										и&nbsp;кастомизируем для&nbsp;врачей
 									</p>
 								</div>
 							</div>
@@ -796,9 +800,9 @@
 											class="box_item_wrap box_item_wrap1"
 											id="run_box3_item1"
 										>
-											<div class="item item1">
+											<!-- <div class="item item1">
 												<p>Проект &laquo;Доктор на&nbsp;работе&raquo;</p>
-											</div>
+											</div> -->
 											<div class="item item2">
 												<img
 													src="../public/images/logo-white-ru1.svg"
@@ -818,12 +822,6 @@
 											class="box_item_wrap box_item_wrap3"
 											id="run_box3_item3"
 										>
-											<div class="item item3">
-												<p>
-													Делаем креативы для врачей и&nbsp;фармацевтов
-													и&nbsp;знаем про их&nbsp;интересы всё
-												</p>
-											</div>
 											<div class="item item4">
 												<p>
 													<span id="years">
@@ -831,6 +829,12 @@
 															years();
 														</script>
 													</span>
+												</p>
+											</div>
+											<div class="item item3">
+												<p>
+													создаём креативы для&nbsp;врачей и&nbsp;фармацевтов,
+													поэтому много знаем про&nbsp;их&nbsp;интересы
 												</p>
 											</div>
 										</div>
@@ -864,12 +868,17 @@
 						</div>
 					</a>
 
-					<div class="mob-order__calc" id="mob-order_animate">
+					<a
+						href="https://dcreativestudio.ru/briff"
+						target="_blank"
+						class="mob-order__calc"
+						id="mob-order_animate"
+					>
 						<div class="mob-order-round"></div>
 						<div class="mob-order-text">
 							<p>Заполнить бриф</p>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="info">
 					<div class="info__email">
@@ -909,7 +918,7 @@
 		const years = () => {
 			let element = document.getElementById('years');
 			let a = new Date().getFullYear();
-			let b = a - 2007;
+			let b = a - 2009;
 			let c = Number(b.toString().slice(-1));
 			switch (true) {
 				case c === 1 && b !== 11:
