@@ -98,19 +98,21 @@ window.addEventListener('DOMContentLoaded', function () {
 	function smoothScroll(anchorClass) {
 		if (document.querySelector(`.${anchorClass}`)) {
 			document.querySelectorAll(`.${anchorClass}`).forEach(link => {
-				link.addEventListener('click', function (e) {
-					if (document.getElementById(link.getAttribute('href').substring(1))) {
-						e.preventDefault();
-						let href = link.getAttribute('href').substring(1);
-						const scrollTarget = document.getElementById(href);
-						const topOffset = 0;
-						const elementPosition = scrollTarget.getBoundingClientRect().top;
-						const offsetPosition = elementPosition - topOffset;
+				link.addEventListener('click', e => {
+					if (link.hasAttribute('href') && link.hasAttribute('data-scroll')) {
+						if (document.querySelector(`.${link.dataset.scroll}`)) {
+							e.preventDefault();
+							const targetElement = link.dataset.scroll;
+							const scrollTarget = document.querySelector(`.${targetElement}`);
+							const topOffset = 0;
+							const elementPosition = scrollTarget.getBoundingClientRect().top;
+							const offsetPosition = elementPosition - topOffset;
 
-						window.scrollBy({
-							top: offsetPosition,
-							behavior: 'smooth',
-						});
+							window.scrollBy({
+								top: offsetPosition,
+								behavior: 'smooth',
+							});
+						}
 					}
 				});
 			});
