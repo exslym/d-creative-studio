@@ -851,11 +851,7 @@
 				</main>
 			</div>
 		</div>
-		<footer
-			class="footer scrollTo"
-			id="order"
-			onclick="sendMessage('make_order')"
-		>
+		<footer class="footer scrollTo" id="order">
 			<div class="container">
 				<div class="order">
 					<div class="order__title">
@@ -916,9 +912,7 @@
 							>&nbsp;D-Creative
 						</div>
 						<div class="info__bottom_item">
-							<a href="#" onclick="sendMessage('privacy_policy')">
-								Политика конфиденциальности
-							</a>
+							<a href="#"> Политика конфиденциальности </a>
 						</div>
 					</div>
 				</div>
@@ -926,26 +920,12 @@
 		</footer>
 
 		<script>
-			// Функция для отправки сообщения родительскому окну
+			// Send message to parent:
 			function sendMessage(buttonLabel) {
 				const prodPath = 'https://dcreativestudio.ru';
-				if (window.location.origin === prodPath) {
-					window.parent.postMessage(
-						{ buttonName: buttonLabel, url: prodPath },
-						prodPath
-					);
-					readMessage();
+				if (window.location.origin.search(/doktornarabote/i)) {
+					window.parent.postMessage({ buttonName: buttonLabel }, prodPath);
 				}
-			}
-
-			function readMessage() {
-				window.addEventListener('message', e => {
-					if (e.data.url === 'https://dcreativestudio.ru') {
-						console.log(
-							`gtag('event', 'button', { click: ${e.data.buttonName} })`
-						);
-					}
-				});
 			}
 		</script>
 
