@@ -15,12 +15,10 @@
 	&::after {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-
 	}
 	&::before {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-
 	}
 }
 a {
@@ -481,8 +479,7 @@ h3 {
 						background-repeat: no-repeat;
 						min-width: clamp(120px, 20.32vw, 260px);
 						min-height: clamp(120px, 20.32vw, 260px);
-						transition: transform 0.8s
-							cubic-bezier(0.4, 0.7, 0.3, 1);
+						transition: transform 0.8s cubic-bezier(0.4, 0.7, 0.3, 1);
 					}
 					.calc-text {
 						position: absolute;
@@ -500,9 +497,7 @@ h3 {
 					.calc-arrow {
 						position: absolute;
 						top: clamp(46%, 10.156vw, 50%);
-						transform: translateY(
-							calc(-50% + clamp(4px, 1.24vw, 16px))
-						);
+						transform: translateY(calc(-50% + clamp(4px, 1.24vw, 16px)));
 						right: clamp(-61px, -4.765vw, -20px);
 						img {
 							max-width: clamp(70px, 11.33vw, 145px);
@@ -522,13 +517,11 @@ h3 {
 				transition: transform 0.8s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 				.title_wrap {
 					width: calc(
-						clamp(680px, 147.66vw, 1890px) +
-							clamp(66px, 18.75vw, 240px)
+						clamp(680px, 147.66vw, 1890px) + clamp(66px, 18.75vw, 240px)
 					);
 					position: absolute;
 					right: calc(
-						clamp(-720px, -147.66vw, -2090px) -
-							clamp(66px, 18.75vw, 240px)
+						clamp(-720px, -147.66vw, -2090px) - clamp(66px, 18.75vw, 240px)
 					);
 					display: flex;
 					flex-wrap: nowrap;
@@ -537,8 +530,7 @@ h3 {
 					img {
 						margin-right: clamp(16px, 6.25vw, 80px);
 						margin-top: clamp(4px, 1.875vw, 24px);
-						transition: transform 0.8s
-							cubic-bezier(0.1, 0.69, 0.36, 0.98);
+						transition: transform 0.8s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 						max-width: clamp(40px, 12.5vw, 160px);
 					}
 					h2 {
@@ -634,8 +626,7 @@ h3 {
 									width: 100%;
 									position: relative;
 									min-height: clamp(20px, 5vw, 64px);
-									transition: transform 1.2s
-										cubic-bezier(0.1, 0.69, 0.36, 0.98);
+									transition: transform 1.2s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 									.marquee_inner {
 										position: absolute;
 										display: inline-flex;
@@ -646,22 +637,16 @@ h3 {
 											li {
 												width: 100%;
 												font-weight: 800;
-												font-size: clamp(
-													16px,
-													3.75vw,
-													48px
-												);
+												font-size: clamp(16px, 3.75vw, 48px);
 												line-height: 130%;
 												letter-spacing: 0.05em;
 												text-transform: uppercase;
 												color: var(--color-black);
-												margin: 0
-													clamp(12px, 1.5625vw, 20px);
+												margin: 0 clamp(12px, 1.5625vw, 20px);
 												&:not(:first-child) {
 													color: transparent;
 													opacity: 0.6;
-													-webkit-text-stroke: 1px
-														var(--color-black);
+													-webkit-text-stroke: 1px var(--color-black);
 												}
 											}
 										}
@@ -698,8 +683,8 @@ h3 {
 				}
 			}
 			&__box {
-				margin: 0 auto;
-				margin-right: 0;
+				//margin: 0 auto;
+				//margin-right: 0;
 				margin-top: clamp(32px, 6.4vw, 80px);
 				max-width: 840px;
 				overflow: hidden;
@@ -737,8 +722,7 @@ h3 {
 							justify-content: flex-start;
 							align-items: center;
 							max-width: 840px;
-							transition: transform 1.2s
-								cubic-bezier(0.1, 0.69, 0.36, 0.98);
+							transition: transform 1.2s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 							.item {
 								flex-shrink: 0;
 								max-width: clamp(220px, 34.375vw, 440px);
@@ -834,12 +818,10 @@ h3 {
 				.title_wrap {
 					position: absolute;
 					width: calc(
-						clamp(1000px, 236.72vw, 3030px) +
-							clamp(66px, 18.75vw, 240px)
+						clamp(1000px, 236.72vw, 3030px) + clamp(66px, 18.75vw, 240px)
 					);
 					right: calc(
-						clamp(-450px, -236.72vw, -3030px) -
-							clamp(66px, 18.75vw, 240px)
+						clamp(-450px, -236.72vw, -3030px) - clamp(66px, 18.75vw, 240px)
 					);
 					display: flex;
 					flex-wrap: nowrap;
@@ -848,8 +830,7 @@ h3 {
 					img {
 						margin-right: clamp(16px, 6.25vw, 80px);
 						margin-top: clamp(4px, 1.875vw, 24px);
-						transition: transform 0.8s
-							cubic-bezier(0.1, 0.69, 0.36, 0.98);
+						transition: transform 0.8s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 						max-width: clamp(40px, 12.5vw, 160px);
 					}
 					h2 {
@@ -933,9 +914,7 @@ h3 {
 				.order-arrow {
 					position: absolute;
 					top: clamp(46%, 10.156vw, 50%);
-					transform: translateY(
-						calc(-50% + clamp(4px, 1.24vw, 16px))
-					);
+					transform: translateY(calc(-50% + clamp(4px, 1.24vw, 16px)));
 					right: clamp(-42px, -3.28vw, -20px);
 					img {
 						max-width: clamp(70px, 11.33vw, 145px);
@@ -948,7 +927,7 @@ h3 {
 			&__email {
 				a {
 					font-weight: 600;
-					font-size: clamp(24px, 6.09vw, 78px);
+					font-size: clamp(22px, 6.09vw, 78px);
 					line-height: 120%;
 					color: var(--color-white);
 				}
@@ -1040,8 +1019,7 @@ h3 {
 						position: relative;
 						max-width: clamp(120px, 20.32vw, 260px);
 						width: 100%;
-						transition: transform 1s
-							cubic-bezier(0.1, 0.69, 0.36, 0.98);
+						transition: transform 1s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 						opacity: 1;
 						cursor: pointer;
 						z-index: 1000;
@@ -1138,12 +1116,7 @@ h3 {
 											.service_keywords {
 												li {
 													line-height: 100%;
-													margin: 0
-														clamp(
-															6px,
-															1.5625vw,
-															20px
-														);
+													margin: 0 clamp(6px, 1.5625vw, 20px);
 												}
 											}
 										}
@@ -1178,7 +1151,7 @@ h3 {
 								flex-direction: column;
 								align-items: flex-start;
 								.item3 {
-									margin-bottom: 12px;
+									margin-top: 12px;
 								}
 							}
 						}
