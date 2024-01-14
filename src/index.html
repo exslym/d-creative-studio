@@ -46,7 +46,6 @@
 									<li>
 										<a
 											href="https://dcreativestudio.ru/blog"
-											target="_blank"
 											class="menu__item"
 											onclick="sendMessage('blog')"
 										>
@@ -57,12 +56,11 @@
 
 									<li>
 										<a
-											href="https://dcreativestudio.ru/portfolio"
-											target="_blank"
+											href="https://dcreativestudio.ru/projects"
 											class="menu__item"
-											onclick="sendMessage('portfolio')"
+											onclick="sendMessage('projects')"
 										>
-											<p class="item_text">Портфолио</p>
+											<p class="item_text">Проекты</p>
 											<p class="item_number">02</p>
 										</a>
 									</li>
@@ -811,9 +809,6 @@
 											class="box_item_wrap box_item_wrap1"
 											id="run_box3_item1"
 										>
-											<!-- <div class="item item1">
-												<p>Проект &laquo;Доктор на&nbsp;работе&raquo;</p>
-											</div> -->
 											<div class="item item2">
 												<img
 													src="../public/images/logo-white-ru1.svg"
@@ -934,30 +929,6 @@
 				let currentYear = document.getElementById('currentYear');
 				currentYear.innerHTML = new Date().getFullYear();
 				return currentYear;
-			};
-		</script>
-
-		<script>
-			const years = () => {
-				let element = document.getElementById('years');
-				let a = new Date().getFullYear();
-				let b = a - 2009;
-				let c = Number(b.toString().slice(-1));
-				switch (true) {
-					case c === 1 && b !== 11:
-						element.innerHTML = `${b}&nbsp;год`;
-						return element;
-						break;
-					case c === 2 && b !== 12:
-					case c === 3 && b !== 13:
-					case c === 4 && b !== 14:
-						element.innerHTML = `${b}&nbsp;года`;
-						return element;
-						break;
-					default:
-						element.innerHTML = `${b}&nbsp;лет`;
-						return element;
-				}
 			};
 		</script>
 	</body>
