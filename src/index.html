@@ -917,9 +917,8 @@
 		<script>
 			// Send message to parent:
 			function sendMessage(buttonLabel) {
-				const prodPath = 'https://dcreativestudio.ru';
 				if (window.location.origin.includes('doktornarabote')) {
-					window.parent.postMessage({ buttonName: buttonLabel }, prodPath);
+					window.parent.postMessage({ buttonName: buttonLabel }, '*');
 				}
 			}
 		</script>
