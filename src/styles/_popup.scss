@@ -1,0 +1,22 @@
+html.mfp-helper {
+	body {
+		overflow: hidden;
+		.wrapper {
+			display: none;
+			visibility: hidden !important;
+			-webkit-overflow-scrolling: none;
+		}
+	}
+}
+.mfp-container {
+	padding: 0 10px;
+}
+.mfp-content {
+	.mfp-close {
+		width: clamp(40px, 3.90625vw, 50px);
+		height: clamp(40px, 3.90625vw, 50px);
+		font-size: clamp(36px, 3.75vw, 48px);
+		color: black;
+		font-weight: 400;
+	}
+}

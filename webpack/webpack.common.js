@@ -1,7 +1,11 @@
 const Path = require('path');
+const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const fs = require('fs');
+
+const dotenv = require('dotenv').config({ Path: './.env' });
+// const dotenv = require('dotenv').config({ Path: '../src/.env' });
 
 let htmlPageNames = [];
 const pages = fs.readdirSync('./src');
@@ -53,7 +57,11 @@ module.exports = {
 			}),
 		],
 	},
-	plugins: [].concat(multipleHtmlPlugins),
+	plugins: [
+		new Webpack.DefinePlugin({
+			'process.env': JSON.stringify(dotenv.parsed),
+		}),
+	].concat(multipleHtmlPlugins),
 	resolve: {
 		alias: {
 			'~': Path.resolve(__dirname, '../src'),
