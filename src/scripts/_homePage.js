@@ -650,35 +650,6 @@ export function homePage() {
 			let ratio2 = 1.1; // run speed1
 			let thresholdRatio = 0.2;
 
-			if (resolutionCheck.resolution === 'desktop') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'desktopMiddle') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'desktopSmall') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'bigTabletVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'middleTabletVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'smallTabletVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'bigPhoneVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'middlePhoneVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
-				ratio1 = 1;
-				ratio2 = 1.1;
-			}
-
 			runBox1T.classList.add('preloadDocClass');
 			runBox1D.classList.add('preloadDocClass');
 			runBox2.classList.add('preloadDocClass');

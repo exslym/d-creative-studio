@@ -1,13 +1,13 @@
 import { resolutionCheck } from './_functions';
 
 export const onResize = () => {
-	if (window.location.origin.includes('localhost')) {
-		console.log('localhost');
-	} else {
-		window.addEventListener('resize', () => {
-			window.location.reload();
-		});
-	}
+	// if (window.location.origin.includes('localhost')) {
+	// 	console.log('localhost');
+	// } else {
+	// 	window.addEventListener('resize', () => {
+	// 		window.location.reload();
+	// 	});
+	// }
 
 	if (
 		resolutionCheck.resolution === 'bigTabletLand' ||
