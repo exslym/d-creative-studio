@@ -1,0 +1,3 @@
+//! html structure - copy templates to your document:
+
+//! scripts - add module to your project and import it in the index.js
