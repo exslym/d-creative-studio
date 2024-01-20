@@ -166,7 +166,7 @@
 						padding-bottom: clamp(0px, 0.3125vw, 4px);
 						font-size: clamp(14px, 2.1875vw, 28px);
 						max-width: clamp(528px, 69.92vw, 895px);
-						width: 100%;
+						// width: 100%;
 						-webkit-appearance: none;
 						-moz-appearance: none;
 						appearance: none;
@@ -199,6 +199,7 @@
 							padding-bottom: 0;
 							font-size: 18px;
 							max-width: 100%;
+							overflow: hidden;
 						}
 						.text {
 							font-size: 22px;
@@ -261,7 +262,7 @@
 						position: absolute;
 						left: clamp(250px, 31.25vw, 400px);
 						top: 50%;
-						transform: translate(0%, -70%);
+						transform: translate(0%, -65%);
 						font-size: clamp(16px, 2.1875vw, 28px);
 						font-weight: 600;
 						line-height: 1.27;
@@ -368,6 +369,7 @@
 						padding: 0;
 						margin: 0;
 						padding-bottom: clamp(0px, 0.3125vw, 4px);
+						padding-bottom: 1px;
 						padding-left: clamp(100px, 10.5468vw, 135px);
 						width: 100%;
 					}
@@ -409,6 +411,8 @@
 						input {
 							padding-left: clamp(92px, 15.8333vw, 95px);
 							padding-bottom: 2px;
+							padding-bottom: 0px;
+							line-height: 1;
 						}
 						.iti .iti__country-list {
 							max-width: 335px;
@@ -470,11 +474,11 @@
 							transform: translate(0%, -10%);
 						}
 						input {
-							padding-bottom: 1px;
+							// padding-bottom: 1px;
 						}
 						.iti {
 							.iti__flag-container {
-								top: 40%;
+								top: 45%;
 							}
 							.iti__country-list {
 								padding: 0;

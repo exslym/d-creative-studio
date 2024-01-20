@@ -446,6 +446,16 @@
 							margin-top: clamp(4px, 1.875vw, 24px);
 							transition: transform 0.8s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 							max-width: clamp(40px, 12.5vw, 160px);
+							@media screen and (max-width: 768px) {
+								margin-right: 30px;
+								margin-top: 10px;
+								max-width: 74px;
+							}
+							@media screen and (max-width: 430px) {
+								margin-right: 20px;
+								margin-top: 5px;
+								max-width: 48px;
+							}
 						}
 						h2 {
 							font-weight: 600;
@@ -453,6 +463,12 @@
 							line-height: 100%;
 							width: clamp(680px, 147.66vw, 1890px);
 							white-space: nowrap;
+							@media screen and (max-width: 768px) {
+								font-size: 110px;
+							}
+							@media screen and (max-width: 430px) {
+								font-size: 68px;
+							}
 						}
 					}
 				}
@@ -781,6 +797,16 @@
 							margin-top: clamp(4px, 1.875vw, 24px);
 							transition: transform 0.8s cubic-bezier(0.1, 0.69, 0.36, 0.98);
 							max-width: clamp(40px, 12.5vw, 160px);
+							@media screen and (max-width: 768px) {
+								margin-right: 30px;
+								margin-top: 10px;
+								max-width: 74px;
+							}
+							@media screen and (max-width: 430px) {
+								margin-right: 20px;
+								margin-top: 5px;
+								max-width: 48px;
+							}
 						}
 						h2 {
 							font-weight: 600;
@@ -788,6 +814,12 @@
 							line-height: 100%;
 							width: clamp(1000px, 236.72vw, 3030px);
 							white-space: nowrap;
+							@media screen and (max-width: 768px) {
+								font-size: 110px;
+							}
+							@media screen and (max-width: 430px) {
+								font-size: 68px;
+							}
 						}
 					}
 				}

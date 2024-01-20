@@ -185,33 +185,46 @@ export function homePage() {
 				ratioDeg = 90;
 				thresholdRatio = 0.15;
 			} else if (resolutionCheck.resolution === 'bigTabletVert') {
-				ratio1 = 3.25;
-				ratio2 = 2850;
+				// ratio1 = 3.25;
+				// ratio2 = 2850;
+				// ratio3 = -0.15;
+				// thresholdRatio = 0.3;
+				ratio1 = 3.5;
+				ratio2 = 3060;
 				ratio3 = -0.15;
-				thresholdRatio = 0.3;
+				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'middleTabletVert') {
-				ratio1 = 3.25;
-				ratio2 = 2500;
+				// ratio1 = 3.25;
+				// ratio2 = 2500;
+				// ratio3 = -0.2;
+				ratio1 = 3.5;
+				ratio2 = 2650;
 				ratio3 = -0.2;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'smallTabletVert') {
-				ratio1 = 3.25;
-				ratio2 = 2100;
+				// ratio1 = 3.25;
+				// ratio2 = 2100;
+				// ratio3 = -0.25;
+				ratio1 = 3.5;
+				ratio2 = 2250;
 				ratio3 = -0.25;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'bigPhoneVert') {
-				ratio1 = 2;
-				ratio2 = 1200;
-				ratio3 = -0.3;
-				thresholdRatio = 0.3;
+				// ratio1 = 2;
+				// ratio2 = 1200;
+				// ratio3 = -0.3;
+				ratio1 = 2.5;
+				ratio2 = 1400;
+				ratio3 = -0.4;
+				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'middlePhoneVert') {
-				ratio1 = 2;
-				ratio2 = 1050;
-				ratio3 = -0.35;
-				thresholdRatio = 0.3;
+				ratio1 = 2.75;
+				ratio2 = 1350;
+				ratio3 = -0.4;
+				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
-				ratio1 = 1.8;
-				ratio2 = 620;
+				ratio1 = 2.5;
+				ratio2 = 750;
 				ratio3 = -0.3;
 				thresholdRatio = 0.2;
 			}
@@ -289,29 +302,29 @@ export function homePage() {
 				ratio3 = 1.1;
 				ratioDeg = 90;
 			} else if (resolutionCheck.resolution === 'bigTabletVert') {
-				ratio1 = 3;
-				ratio2 = 2100;
+				ratio1 = 3.5;
+				ratio2 = 2300;
 				ratio3 = 0.95;
 			} else if (resolutionCheck.resolution === 'middleTabletVert') {
-				ratio1 = 3;
-				ratio2 = 2000;
+				ratio1 = 3.5;
+				ratio2 = 1800;
 				ratio3 = 1;
 			} else if (resolutionCheck.resolution === 'smallTabletVert') {
-				ratio1 = 3;
-				ratio2 = 1800;
+				ratio1 = 3.25;
+				ratio2 = 1600;
 				ratio3 = 1.3;
 			} else if (resolutionCheck.resolution === 'bigPhoneVert') {
-				ratio1 = 2;
+				ratio1 = 2.5;
 				ratio2 = 1100;
 				ratio3 = 2.1;
 			} else if (resolutionCheck.resolution === 'middlePhoneVert') {
-				ratio1 = 2;
-				ratio2 = 1100;
-				ratio3 = 2.1;
-			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
-				ratio1 = 2.25;
+				ratio1 = 2.5;
 				ratio2 = 1050;
 				ratio3 = 2.1;
+			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
+				ratio1 = 2.5;
+				ratio2 = 900;
+				ratio3 = 2.75;
 			}
 
 			// for reload page not at top:

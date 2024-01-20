@@ -239,7 +239,6 @@
 				justify-content: center;
 				gap: clamp(20px, 3.125vw, 40px);
 				.item {
-					cursor: pointer;
 					padding: clamp(20px, 3.125vw, 40px);
 					display: flex;
 					flex-direction: column;
@@ -249,6 +248,9 @@
 					border-radius: clamp(10px, 1.25vw, 16px);
 					width: 100%;
 					max-width: calc(50% - clamp(20px, 3.125vw, 40px) / 2);
+					button {
+						cursor: pointer;
+					}
 					h4 {
 						margin-top: clamp(20px, 1.875vw, 24px);
 					}
@@ -268,7 +270,7 @@
 						font-size: clamp(13px, 1.17vw, 15px);
 						line-height: 1.6;
 						color: var(--color-black);
-						max-width: clamp(280px, 25vw, 320px);
+						text-align: left;
 					}
 					.tagBox {
 						margin-top: clamp(20px, 4.375vw, 56px);
