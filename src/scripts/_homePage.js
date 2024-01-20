@@ -185,46 +185,36 @@ export function homePage() {
 				ratioDeg = 90;
 				thresholdRatio = 0.15;
 			} else if (resolutionCheck.resolution === 'bigTabletVert') {
-				// ratio1 = 3.25;
-				// ratio2 = 2850;
-				// ratio3 = -0.15;
-				// thresholdRatio = 0.3;
 				ratio1 = 3.5;
 				ratio2 = 3060;
 				ratio3 = -0.15;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'middleTabletVert') {
-				// ratio1 = 3.25;
-				// ratio2 = 2500;
-				// ratio3 = -0.2;
 				ratio1 = 3.5;
 				ratio2 = 2650;
 				ratio3 = -0.2;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'smallTabletVert') {
-				// ratio1 = 3.25;
-				// ratio2 = 2100;
-				// ratio3 = -0.25;
 				ratio1 = 3.5;
 				ratio2 = 2250;
 				ratio3 = -0.25;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'bigPhoneVert') {
-				// ratio1 = 2;
-				// ratio2 = 1200;
-				// ratio3 = -0.3;
+				// ratio1 = 2.5;
+				// ratio2 = 1400;
+				// ratio3 = -0.4;
 				ratio1 = 2.5;
-				ratio2 = 1400;
+				ratio2 = 1200;
 				ratio3 = -0.4;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'middlePhoneVert') {
 				ratio1 = 2.75;
-				ratio2 = 1200;
+				ratio2 = 1100;
 				ratio3 = -0.4;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
 				ratio1 = 2.5;
-				ratio2 = 750;
+				ratio2 = 650;
 				ratio3 = -0.3;
 				thresholdRatio = 0.2;
 			}
