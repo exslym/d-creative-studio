@@ -219,7 +219,7 @@ export function homePage() {
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'middlePhoneVert') {
 				ratio1 = 2.75;
-				ratio2 = 1350;
+				ratio2 = 1200;
 				ratio3 = -0.4;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'smallPhoneVert') {
