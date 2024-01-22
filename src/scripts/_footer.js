@@ -5,7 +5,6 @@ import {
 	resetOrderButton,
 	setOrderButton,
 } from './_functions';
-import { sendMessage } from './_sendMessage';
 
 export function footer() {
 	const w = window;
@@ -200,13 +199,11 @@ export function footer() {
 								document.querySelector('.success').click();
 								resetOrderButton(orderRound, orderButton);
 								clearForm(user, email, phone);
-								sendMessage('order_send_success');
 							},
 							function (error) {
 								console.log('FAILED...', error);
 								document.querySelector('.error').click();
 								resetOrderButton(orderRound, orderButton);
-								sendMessage('order_send_error');
 							}
 						);
 					}
