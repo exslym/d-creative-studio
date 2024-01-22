@@ -177,6 +177,12 @@
 						background-position-y: 0%;
 						background-size: clamp(18px, 2.1875vw, 28px)
 							clamp(18px, 2.5vw, 32px);
+						.desktop {
+							display: inline-block;
+						}
+						.mobile {
+							display: none;
+						}
 					}
 					@media screen and (max-width: 767px) {
 						gap: 8px;
@@ -200,6 +206,12 @@
 							font-size: 18px;
 							max-width: 100%;
 							overflow: hidden;
+							.desktop {
+								display: none;
+							}
+							.mobile {
+								display: inline-block;
+							}
 						}
 						.text {
 							font-size: 22px;
