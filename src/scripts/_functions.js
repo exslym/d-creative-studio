@@ -127,9 +127,23 @@ export const headerAnimation = (
 	if (scrolledParent < 340) {
 		element1.style.transform = `translateY(${-1 * scrolledParent * speed1}px)`;
 		element2.style.transform = `scale(${1 / (1 + scrolledParent * speed2)})`;
+		element2.classList.remove('anchor');
+		element2.style.pointerEvents = 'none';
 	} else {
 		element1.style.transform = `translateY(-116px)`;
 		element2.style.transform = `scale(0.1155)`;
+		element2.classList.add('anchor');
+		element2.style.pointerEvents = 'auto';
+	}
+};
+
+export const headerLogoButton = element => {
+	if (element.style.transform === `scale(0.1155)`) {
+		element.classList.add('anchor');
+		element.style.pointerEvents = 'auto';
+	} else {
+		element.classList.remove('anchor');
+		element.style.pointerEvents = 'none';
 	}
 };
 

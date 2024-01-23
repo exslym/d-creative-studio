@@ -26,9 +26,10 @@
 					<div class="header_wrapper">
 						<div class="header__logo" id="logo_box">
 							<button
-								class="header__logo_img anchor"
+								class="header__logo_img"
 								id="logo_img"
-								data-target="projectsStart"
+								data-target="goHome"
+								onclick="window.history.back()"
 							>
 								<img src="../public/images/logo1_mob.svg" alt="logo1" />
 							</button>
@@ -39,21 +40,15 @@
 							</div>
 							<nav class="header__menu_nav" id="menu">
 								<div class="nav_wrap">
-									<div class="logo">
+									<button
+										class="logo"
+										data-target="goHome"
+										onclick="window.history.back()"
+									>
 										<img src="../public/images/logo2.svg" alt="logo2" />
-									</div>
+									</button>
 								</div>
 								<ul class="menu">
-									<li>
-										<button
-											class="menu__item"
-											data-target="goHome"
-											onclick="window.history.back()"
-										>
-											<p class="item_text">Главная</p>
-											<p class="item_number">00</p>
-										</button>
-									</li>
 									<li>
 										<button
 											class="menu__item anchor"
@@ -331,14 +326,14 @@
 											class="slider-button prevButton"
 											data-label="slider_prev"
 										>
-											&#8592;
+											<p>&#8592;</p>
 										</button>
 
 										<button
 											class="slider-button nextButton"
 											data-label="slider_next"
 										>
-											&#8594;
+											<p>&#8594;</p>
 										</button>
 									</div>
 								</div>

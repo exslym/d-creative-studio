@@ -269,6 +269,7 @@
 						margin-top: clamp(10px, 1.25vw, 16px);
 						font-size: clamp(13px, 1.17vw, 15px);
 						line-height: 1.6;
+						font-weight: 400;
 						color: var(--color-black);
 						text-align: left;
 					}
@@ -291,6 +292,7 @@
 							p {
 								font-size: clamp(13px, 1.17vw, 15px);
 								line-height: 1.6;
+								font-weight: 400;
 							}
 						}
 					}
@@ -357,10 +359,17 @@
 							& > * {
 								width: 100%;
 							}
+							h3 {
+								font-weight: 400;
+							}
+							h4 {
+								font-weight: 600;
+							}
 							p {
 								margin-top: 16px;
 								font-size: clamp(13px, 1.17vw, 15px);
 								line-height: 1.6;
+								font-weight: 400;
 							}
 							@media screen and (max-width: 1000px) {
 								gap: 30px;
@@ -392,13 +401,21 @@
 							height: clamp(36px, 4.0625vw, 52px);
 							font-size: clamp(20px, 2.5vw, 32px);
 							line-height: 1;
-							border: clamp(1px, 0.156vw, 2px) solid var(--color-border);
+							border: 1px solid var(--color-border);
 						}
 						.prevButton {
 							transform: translate(-50%, 0%);
+							p {
+								margin-top: clamp(2px, 0.2343vw, 3px);
+								font-weight: 400;
+							}
 						}
 						.nextButton {
 							transform: translate(50%, 0%);
+							p {
+								margin-top: clamp(2px, 0.2343vw, 3px);
+								font-weight: 400;
+							}
 						}
 						@media screen and (max-width: 1368px) {
 							.prevButton {

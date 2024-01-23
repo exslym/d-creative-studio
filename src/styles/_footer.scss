@@ -9,7 +9,7 @@
 		.info {
 			&__email a,
 			&__phone a {
-				font-weight: 500;
+				font-weight: 400;
 				font-size: clamp(18px, 6.09vw, 78px);
 				line-height: 120%;
 				color: var(--color-white);
@@ -28,7 +28,7 @@
 				align-items: center;
 				justify-content: space-between;
 				&_item {
-					font-weight: 500;
+					font-weight: 400;
 					font-size: clamp(14px, 1.72vw, 22px);
 					line-height: 155%;
 					color: var(--color-white);
@@ -59,7 +59,7 @@
 			opacity: 0.6;
 			font-size: clamp(14px, 1.72vw, 22px);
 			line-height: 1.3;
-			font-weight: 500;
+			font-weight: 400;
 			color: var(--color-white);
 		}
 		.text {
@@ -83,7 +83,7 @@
 				.field {
 					width: 100%;
 					font-size: clamp(27px, 4.68755vw, 60px);
-					font-weight: 500;
+					font-weight: 400;
 					line-height: 1.06;
 					display: flex;
 					align-items: flex-end;
@@ -102,7 +102,7 @@
 						border: 0;
 						border-bottom: clamp(1px, 0.156vw, 2px) solid var(--color-black);
 						font-size: clamp(14px, 2.1875vw, 28px);
-						font-weight: 600;
+						font-weight: 400;
 						line-height: 1.27;
 						width: 100%;
 						background-color: transparent;
@@ -112,7 +112,7 @@
 							margin: 0;
 							padding: 0;
 							font-size: clamp(16px, 2.1875vw, 28px);
-							font-weight: 500;
+							font-weight: 400;
 							line-height: 1.27;
 							color: var(--color-light);
 						}
@@ -150,7 +150,7 @@
 					}
 					@media screen and (max-width: 475px) {
 						font-size: 22px;
-						font-weight: 600;
+						font-weight: 400;
 					}
 				}
 				.toolbox {
@@ -200,7 +200,7 @@
 					}
 					@media screen and (max-width: 475px) {
 						font-size: 22px;
-						font-weight: 600;
+						font-weight: 400;
 						select {
 							padding-bottom: 0;
 							font-size: 18px;
@@ -228,11 +228,11 @@
 				}
 				.text {
 					font-size: clamp(27px, 4.68755vw, 60px);
-					font-weight: 500;
+					font-weight: 400;
 					line-height: 1.06;
 					@media screen and (max-width: 475px) {
 						font-size: 22px;
-						font-weight: 600;
+						font-weight: 400;
 					}
 				}
 				.emailbox {
@@ -259,7 +259,7 @@
 					}
 					@media screen and (max-width: 475px) {
 						font-size: 22px;
-						font-weight: 600;
+						font-weight: 400;
 						input {
 							font-size: 18px;
 						}
@@ -276,7 +276,7 @@
 						top: 50%;
 						transform: translate(0%, -65%);
 						font-size: clamp(16px, 2.1875vw, 28px);
-						font-weight: 600;
+						font-weight: 400;
 						line-height: 1.27;
 						display: flex;
 						align-items: center;
@@ -338,7 +338,7 @@
 							box-shadow: 0px 4px 6px 0px rgba(128, 100, 78, 0.2);
 							li {
 								font-size: clamp(16px, 1.5625vw, 20px);
-								font-weight: 500;
+								font-weight: 400;
 								line-height: 1.5;
 								span {
 									margin-top: 3px;
@@ -465,7 +465,7 @@
 					}
 					@media screen and (max-width: 475px) {
 						font-size: 22px;
-						font-weight: 600;
+						font-weight: 400;
 						.prefix {
 							transform: translate(0%, -22%);
 						}
@@ -531,7 +531,7 @@
 						margin: 0;
 						padding: 0;
 						font-size: clamp(14px, 1.72vw, 22px);
-						font-weight: 500;
+						font-weight: 400;
 						line-height: 1.27;
 						color: var(--color-black);
 						a {
