@@ -1,6 +1,7 @@
 import '../styles/index.scss';
 import { common } from './_common';
 import { footer } from './_footer';
+import { headerLogoButton } from './_functions';
 import { homePage } from './_homePage';
 import { popup } from './_popup';
 import { projectsPage } from './_projectsPage';
@@ -25,7 +26,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	footer();
 
-	smoothScroll(`anchor`);
+	smoothScroll('anchor');
+
+	headerLogoButton('logoButton');
 
 	popup('popup');
 });

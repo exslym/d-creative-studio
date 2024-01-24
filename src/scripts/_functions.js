@@ -137,13 +137,22 @@ export const headerAnimation = (
 	}
 };
 
-export const headerLogoButton = element => {
-	if (element.style.transform === `scale(0.1155)`) {
-		element.classList.add('anchor');
-		element.style.pointerEvents = 'auto';
-	} else {
-		element.classList.remove('anchor');
-		element.style.pointerEvents = 'none';
+//* HEADER LOGO CLICK TO SCROLL TOP:
+export const headerLogoButton = logoButton => {
+	if (document.querySelector(`.${logoButton}`)) {
+		const button = document.querySelector(`.${logoButton}`);
+		button.addEventListener('click', e => {
+			e.preventDefault();
+			if (button.classList.contains('anchor')) {
+				const targetElement = button.dataset.target;
+				const scrollTarget = document.querySelector(`#${targetElement}`);
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				window.scrollBy({
+					top: elementPosition,
+					behavior: 'smooth',
+				});
+			}
+		});
 	}
 };
 

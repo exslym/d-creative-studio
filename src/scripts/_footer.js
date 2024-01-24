@@ -231,11 +231,6 @@ export function footer() {
 									footer.getBoundingClientRect().y; // 0 - 1608
 								const startDeg = scrolledFooter - startAnimation; // 0 - 180
 
-								// console.log(`footerHeight: ${footerHeight}`); // 1608
-								// console.log(`startAnimation: ${startAnimation}`); // 1005
-								// console.log(`scrolledFooter: ${scrolledFooter}`); // 0 - 1608
-								// console.log(`startDeg: ${startDeg}`); // 0 - 180
-
 								orderButtonAnimation(
 									scrolledFooter,
 									startAnimation,
