@@ -6,7 +6,7 @@ export function common() {
 	const x = w.innerWidth || e.clientWidth || g.clientWidth;
 	const y = w.innerHeight || e.clientHeight || g.clientHeight;
 	const isMobileDevice =
-		/Android|webOS|Macintosh|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+		/Android|webOS|Mac|Macintosh|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 			navigator.userAgent
 		) && navigator.maxTouchPoints > 1;
 

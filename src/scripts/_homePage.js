@@ -200,9 +200,6 @@ export function homePage() {
 				ratio3 = -0.25;
 				thresholdRatio = 0.2;
 			} else if (resolutionCheck.resolution === 'bigPhoneVert') {
-				// ratio1 = 2.5;
-				// ratio2 = 1400;
-				// ratio3 = -0.4;
 				ratio1 = 2.5;
 				ratio2 = 1200;
 				ratio3 = -0.4;
